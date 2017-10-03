@@ -1,8 +1,11 @@
 
-public class CoordinatePoint {
+public class CoordinatePoint implements Comparable<CoordinatePoint> {
 	
-	double x;
-	double y;
+	private double x;
+	private double y;
+	final int LESS = -1;
+	final int EQUAL = 0;
+	final int GREATER = 1;
 
 	public CoordinatePoint(double x, double y){
 		this.x = x;
@@ -12,5 +15,15 @@ public class CoordinatePoint {
 	public double getX(){return x;}
 	
 	public double getY(){return y;}
+
+	@Override
+	public int compareTo(CoordinatePoint p) {
+		
+		if(p.getX() > this.x)return LESS;
+		
+		if(p.getX() == this.x)return EQUAL;
+		
+		else return GREATER;
+	}
 	
 }
