@@ -41,9 +41,16 @@ public class RecursiveDistanceCalculator {
 		//Sorting data
 		Collections.sort(list);
 		
+		for(int i=0 ; i < list.size() ;i++){
+		x1 = list.get(i).getX();
+		y1 = list.get(i).getY();
+		
+		System.out.printf("%f, %f \n", x1, y1);
+	}
+		
 		
 		//Calculate shortest distance recursively
-		this.calculateShortest(n);
+		//this.calculateShortest(n);
 		
 	}
 	
@@ -62,7 +69,7 @@ public class RecursiveDistanceCalculator {
 		
 		
 		
-	}
+
 }
 	
 

@@ -19,11 +19,14 @@ public class CoordinatePoint implements Comparable<CoordinatePoint> {
 	@Override
 	public int compareTo(CoordinatePoint p) {
 		
-		if(p.getX() > this.x)return LESS;
+		
+		/*If return GREATER, descending order
+		 * If return LESS, ascending order*/
+		if(p.getX() > this.x)return GREATER;
 		
 		if(p.getX() == this.x)return EQUAL;
 		
-		else return GREATER;
+		else return LESS;
 	}
 	
 }

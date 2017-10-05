@@ -22,7 +22,7 @@ public class BruteForceClosestPoint {
 		
 		
 		//Creating input
-		n = 1000;
+		n = 1000000;
 		for(int i = 0; i<n;i++){
 			list.add(randomP.randomizeP());
 		}
