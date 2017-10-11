@@ -1,4 +1,4 @@
-public class Calculator2 {
+public class DistanceCalculator {
 	
 	double x1;
 	double x2;

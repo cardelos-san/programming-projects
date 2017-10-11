@@ -22,11 +22,11 @@ public class CoordinatePoint implements Comparable<CoordinatePoint> {
 		
 		/*If return GREATER, descending order
 		 * If return LESS, ascending order*/
-		if(p.getX() > this.x)return GREATER;
+		if(p.getX() > this.x)return LESS;
 		
 		if(p.getX() == this.x)return EQUAL;
 		
-		else return LESS;
+		else return GREATER;
 	}
 	
 }

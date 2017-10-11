@@ -2,7 +2,7 @@ import java.util.*;
 public class BruteForceClosestPoint {
 	
 	RandomCoordinatePoint randomP = new RandomCoordinatePoint();
-	Calculator2 calc;
+	DistanceCalculator calc;
 	double x1;
 	double x2;
 	double y1;
@@ -18,15 +18,14 @@ public class BruteForceClosestPoint {
 	
 	public void calculateShortest(){
 		
-		calc = new Calculator2();
+		calc = new DistanceCalculator();
 		
 		
 		//Creating input
-		n = 1000000;
+		n = 3000;
 		for(int i = 0; i<n;i++){
 			list.add(randomP.randomizeP());
 		}
-		
 		
 		
 		//Just printing the values of x and y
