@@ -21,7 +21,7 @@ public class Document {
 	
 	public String toString(){
 		String result;
-		result = "DocumentID: " + getDocumentID() + " Location: " + getDocumentPath() + "\n";
+		result = "DocumentID: " + getDocumentID() + " Location: " + getDocumentPath()+ "\n";
 		return result;
 	}
 
