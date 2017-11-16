@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 public class InvertedIndex {
 	
-	
 	//HashMap<String, ArrayList<Document> -- Each key term has a list of documents
 	private HashMap <String, ArrayList<Document>> inverted_index;
 	private ArrayList<Document> documentList;
@@ -61,6 +60,7 @@ public class InvertedIndex {
 							termDocumentList.add(document);
 							inverted_index.put(_term, termDocumentList);
 						}
+						
 						/*If term is in index, but document is not in its list
 						of documents, then update term's document list*/
 						else if(inverted_index.containsKey(_term) &&
@@ -73,39 +73,25 @@ public class InvertedIndex {
 			catch(Exception noFileFound){
 				view.printMsg("Error reading file");
 			}
-			
 			reader.close();
 		}
-		//Printing inverted index
-		/*for (String term: inverted_index.keySet()){
-
-            String key = term.toString();
-            String value = inverted_index.get(term).toString();  
-            System.out.println(key + " " + value);  
-
-		}*/
 	}
 	
 	public String searchIndex(String query){
 		
 		//Timing function
 		double start = System.currentTimeMillis();
-		
 		String result = "";
-		
 		if(inverted_index.containsKey(query)){
 			result = inverted_index.get(query).toString() + "\n";
 		}
-		
 		else{result = "No matches\n";}
 		
+		//Time stop
 		double stop = System.currentTimeMillis();
 		double elapsedTime = stop - start;
-		
 		String time = "Execution time in milliseconds: " + elapsedTime;
 		return result + time;
-		
-		
 	}
 	
 	public String indexedDocuments(){

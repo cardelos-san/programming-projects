@@ -1,6 +1,5 @@
 
 public class Document {
-	
 	private int fileID;
 	private String filePath;
 	
@@ -10,12 +9,10 @@ public class Document {
 	}
 	
 	public int getDocumentID(){
-		
 		return fileID;
 	}
 	
 	public String getDocumentPath(){
-			
 			return filePath;
 		}
 	
