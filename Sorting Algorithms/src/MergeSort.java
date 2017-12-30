@@ -1,19 +1,32 @@
 import java.util.Arrays;
 
 public class MergeSort {
-	private int inputList[];
+	private float inputList[];
+	private double time;
 	
-	public MergeSort(int list[]) {
+	public MergeSort(float list[]) {
 		inputList = list.clone();
 	}
 	
 	void sort(){
 		int left = 0;
 		int right = inputList.length - 1;
+		
+		//Timing function
+	    double start = System.currentTimeMillis();
+	    
 		this.sort(left, right);
+		
+		//Stop timer
+		double stop = System.currentTimeMillis();
+		time = stop - start;
+		
 	}
 	
 	void sort(int left, int right){
+		
+		
+	    
 		if(left < right){
 			int mid = (left+right)/2;
 			
@@ -22,7 +35,6 @@ public class MergeSort {
 			
 			merge(left, mid, right);
 		}
-		
 	}
 	
 	void merge(int left, int mid, int right){
@@ -30,8 +42,8 @@ public class MergeSort {
 		int nLeft = mid - left + 1;
 		int nRight = right - mid;
 		
-		int leftArr[] = new int [nLeft];
-		int rightArr[] = new int [nRight];
+		float leftArr[] = new float [nLeft];
+		float rightArr[] = new float [nRight];
 		
 		leftArr = Arrays.copyOfRange(inputList, left, mid + 1);
 		rightArr = Arrays.copyOfRange(inputList, mid + 1, right + 1);
@@ -75,6 +87,10 @@ public class MergeSort {
 		for(int i = 0; i<n;i++){
 			System.out.println(inputList[i]);
 		}
+	}
+	
+	public double execTime(){
+		return time;
 	}
 	
 }
