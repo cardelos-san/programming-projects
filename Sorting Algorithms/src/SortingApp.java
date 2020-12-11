@@ -61,7 +61,7 @@ public class SortingApp {
 				mSort.printArray();
 				System.out.println("\n");
 				//input is not sorted, call method to get sorted list
-				System.out.println("Mean: " + input.getMean() + "\n" + "Median: " + input.getMedian());
+				System.out.println("Mean: " + mSort.getMean() + "\n" + "Median: " + mSort.getMedian());
 				System.out.println("Execution time was: " + mSort.execTime() + " milliseconds");
 				break;
 			case 2:
